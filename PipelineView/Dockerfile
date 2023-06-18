@@ -10,6 +10,14 @@ RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /
 USER appuser
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+# Install NodeJs
+RUN apt-get update && \
+apt-get install -y wget && \
+apt-get install -y gnupg2 && \
+wget -qO- https://deb.nodesource.com/setup_20.x | bash - && \
+apt-get install -y build-essential nodejs
+# End Install
+
 WORKDIR /src
 COPY ["PipelineView/PipelineView.csproj", "PipelineView/"]
 RUN dotnet restore "PipelineView/PipelineView.csproj"
