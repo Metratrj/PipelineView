@@ -1,9 +1,14 @@
+<ng-container *ngIf="!initalLoadingComplete">
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__wobble" src="dist/img/Logo.png" alt="PipelineView" height="60" width="60">
+  </div>
+</ng-container>
 <metratrj-navigation [navigationProperties]="navigationProperies">
-  <metratrj-banner title="Welcome to the store!"> </metratrj-banner>
+  <metratrj-banner title="Welcome to the fabulouse PipelineView!"> </metratrj-banner>
     <ul>
       <li *ngFor="let product of products">
         <strong>{{ product.name }}</strong> Price: {{ product.price }}
       </li>
     </ul>
-<metratrj-nx-welcome></metratrj-nx-welcome> <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </metratrj-navigation>
