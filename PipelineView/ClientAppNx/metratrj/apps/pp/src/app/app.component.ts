@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { exampleProducts } from '@metratrj/products';
 
 @Component({
   selector: 'metratrj-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pp';
+  products = exampleProducts;
 }
