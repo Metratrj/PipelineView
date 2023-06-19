@@ -1,10 +1,12 @@
-/** @type {import('tailwindcss').Config} */
+const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
+const { join } = require('path');
 const defaultTheme = require('tailwindcss/defaultTheme')
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{html,ts,scss}",
+    join(__dirname, 'src/**/!(*.stories|*.spec).{ts,html,scss}'),
+    ...createGlobPatternsForDependencies(__dirname),
   ],
-  important: true,
   theme: {
     extend: {
       fontFamily: {
@@ -15,5 +17,4 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
   ],
-}
-
+};

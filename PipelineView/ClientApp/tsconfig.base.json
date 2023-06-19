@@ -1,0 +1,18 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2022",
+    "module": "es2020",
+    "lib": ["es2018", "dom"],
+    "baseUrl": "./",
+    "paths": {
+      "common-ui": ["common-ui/src/index.ts"],
+      "products": ["products/src/index.ts"]
+    }
+  }
+}
