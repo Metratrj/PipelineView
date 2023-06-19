@@ -9,4 +9,5 @@ import { exampleProducts } from '@metratrj/products';
 export class AppComponent {
   title = 'pp';
   products = exampleProducts;
+  navigationProperies: any;
 }
