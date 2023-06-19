@@ -1,5 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@layer base {
+  /* Override default scroll width & look */
+  ::-webkit-scrollbar {
+    @apply w-1;
+  }
 
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px #cbcbcd;
+    -webkit-box-shadow: inset 0 0 6px #cbcbcd;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #a1a1a4;
+  }
+}
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
