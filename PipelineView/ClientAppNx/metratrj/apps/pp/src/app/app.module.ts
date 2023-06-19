@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { CommonUiModule } from '@metratrj/common-ui';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
-    CommonUiModule
+    CommonUiModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
