@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@metratrj/common-ui": ["libs/common-ui/src/index.ts"],
-      "@metratrj/products": ["libs/products/src/index.ts"]
+      "@metratrj/products": ["libs/products/src/index.ts"],
+      "@metratrj/shared-models": ["libs/shared-models/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
