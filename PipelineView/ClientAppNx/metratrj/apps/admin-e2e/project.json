@@ -1,13 +1,13 @@
 {
-  "name": "addmin-e2e",
+  "name": "admin-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/addmin-e2e/src",
+  "sourceRoot": "apps/admin-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@mands/nx-playwright:playwright-executor",
       "options": {
-        "e2eFolder": "apps/addmin-e2e",
+        "e2eFolder": "apps/admin-e2e",
         "devServerTarget": "admin:serve",
         "packageRunner": "pnpm"
       },
@@ -31,7 +31,7 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/addmin-e2e/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/admin-e2e/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
