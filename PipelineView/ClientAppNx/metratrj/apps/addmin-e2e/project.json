@@ -1,0 +1,40 @@
+{
+  "name": "addmin-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/addmin-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@mands/nx-playwright:playwright-executor",
+      "options": {
+        "e2eFolder": "apps/addmin-e2e",
+        "devServerTarget": "admin:serve",
+        "packageRunner": "pnpm"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "admin:serve:production"
+        }
+      }
+    },
+    "ts-check": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "tsc --build --force --verbose apps/admin-e2e/tsconfig.json"
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/addmin-e2e/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["admin"]
+}

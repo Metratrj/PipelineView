@@ -2,11 +2,13 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterTestingModule } from '@angular/router/testing';
+import { CommonUiModule } from '@metratrj/common-ui';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [RouterTestingModule, CommonUiModule, BrowserAnimationsModule],
       declarations: [AppComponent, NxWelcomeComponent],
     }).compileComponents();
   });
