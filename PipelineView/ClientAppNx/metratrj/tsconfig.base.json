@@ -16,6 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@metratrj/common-ui": ["libs/common-ui/src/index.ts"],
+      "@metratrj/pipeline-models": ["libs/pipeline-models/src/index.ts"],
+      "@metratrj/pipelines": ["libs/pipelines/src/index.ts"],
       "@metratrj/products": ["libs/products/src/index.ts"],
       "@metratrj/shared-models": ["libs/shared-models/src/index.ts"]
     }

@@ -1,3 +1,5 @@
 <metratrj-navigation [navigationProperties]="navigationProperies">
-  <metratrj-banner title="Welcome to our admin app."> </metratrj-banner><router-outlet></router-outlet>
+  <metratrj-content-card [title]="''">
+    <router-outlet><mat-progress-spinner></mat-progress-spinner></router-outlet>
+  </metratrj-content-card>
 </metratrj-navigation>
